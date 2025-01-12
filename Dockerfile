@@ -10,7 +10,7 @@ COPY files/keepass.file /headless/Documents/keepass.file
 RUN chown 1000:1000 /headless/Documents/keepass.file
 
 ADD ./inst/ $INST_SCRIPTS/
-# RUN dpkg -i vcard-studio_1.5.0_amd64.deb
+RUN apt install -y $INST_SCRIPTS/vcard-studio_1.5.0_amd64.deb
 
 
 ## switch back to default user
